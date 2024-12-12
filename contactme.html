@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact</title>
+    <style>
+        * {margin: 0; padding: 0; box-sizing: border-box;}
+
+        body {font-family: Arial, sans-serif; background: linear-gradient(to right, #212121, #000000); color: #fff;}
+
+        header {position: absolute; top: 0; left: 0; width: 100%; padding: 20px; background-color: rgba(255, 255, 255, 0.2);
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); font-family: 'DM serif display', static; /link rel="preconnect" href="https://fonts.googleapis.com">
+            <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+            <link href="https://fonts.googleapis.com/css2?family=Anek+Devanagari:wght@100..800&family=DM+Serif+Display:ital@0;1&family=Rozha+One&family=Teko:wght@300..700&display=swap" rel="stylesheet">/;}
+
+        .nav {display: flex; justify-content: space-between;}
+
+        .designer-name {font-size: 24px;}
+
+        nav ul {list-style-type: none;}
+
+        nav ul li {display: inline; margin-right: 20px;}
+
+        nav a {text-decoration: none; color: #fff;}
+
+        main {display: flex; height: calc(100vh - 100px); position: relative; margin-top: 70px;}
+
+        .contact-info {width: 60%; height: 50%; margin-top: 150px; margin-left: 100px; padding-left: 100px; padding: 20px;
+            background-color:linear-gradient(to right, #212121, #000000); font-color: white; color: black;
+            transition: transform 1s ease-in-out; transform: translateX(-100%);font-size: 20px;
+            font-family: 'DM serif display', static; /link rel="preconnect" href="https://fonts.googleapis.com">
+            <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+            <link href="https://fonts.googleapis.com/css2?family=Anek+Devanagari:wght@100..800&family=DM+Serif+Display:ital@0;1&family=Rozha+One&family=Teko:wght@300..700&display=swap" rel="stylesheet">/;}
+
+        
+        .fade-in-image {width: 40%; height: auto; opacity: 0; transition: opacity 1s ease-in-out;}
+        footer {text-align: center; padding: 20px; background-color: rgba(255, 255, 255, 0.2);}
+
+    </style>
+</head>
+<body>
+    <header>
+        <div class="nav">
+            <h1 class="designer-name" onclick="window.location.href='logo.html'">Piyush Bodade</h1>
+            <nav>
+                <ul>
+                    <li><a href="logo.html">Home</a></li>
+                    <li><a href="aboutme.html">About Me</a></li>
+                    <li><a href="work.html">Work</a></li>
+                    <li><a href="contactme.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <!-- Contact Information Container -->
+        <div class="contact-info" id="contactInfo">
+            <h2 style="color: #ffffff; font-size: 50px;">Contact, perhaps?</h2>
+            <p style="color: #ffffff; font-size: 30px;">For inquiries or collaborations, please reach out</p>
+            <p style="color: #ffffff; font-size: 30px;">through the following methods:</p>
+            
+            <h3 style="color: #fff; font-size: 40px;">Email <img src="images/112-gmail_email_mail-512.webp" alt="Email Icon" style="width:30px; margin-top: 30px;"></h3>
+            <p style="color: #ffffff; font-size: 30px;">piyush.bodade.pb@gmail.com</p>
+            <h3 style="color: #fff; font-size: 30px;">Behance <img src="images/behance.png" alt="Behance Icon" style="width:30px; margin-top: 30px;">
+            </h3>
+            <p><a href="https://www.behance.net/piyushbodade" style="color: #ffffff; font-size: 30px;">https://www.behance.net/piyushbodade</a></p>
+        </div>
+
+        <!-- Image that fades in -->
+        <img src="images/contact.png" alt="Contact Image" class="fade-in-image" id="contactImage">
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Piyush Bodade. All rights reserved.</p>
+    </footer>
+
+    <script>
+        // Fade in effect for the image and slide in contact info
+        window.onload = function() {
+            const image = document.getElementById('contactImage');
+            const contactInfo = document.getElementById('contactInfo');
+  
+            // Fade in image
+            image.style.opacity = '1'; // Set opacity to fully visible
+  
+            // Slide in contact information after a delay
+            setTimeout(() => {
+                contactInfo.style.transform = 'translateX(0)'; // Move into view from right
+            }, 1000); // Delay for fade-in effect of the image
+        };
+      </script>
+</body>
+</html>

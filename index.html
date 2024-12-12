@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <style>
+        * {margin: 0; padding: 0; box-sizing: border-box;}
+
+        body {font-family: Arial, sans-serif; background: linear-gradient(to right, #212121, #000000); color: #fff;}
+
+        header {position: absolute; top: 0; left: 0; width: 100%; padding: 20px; background-color: rgba(255, 255, 255, 0.2);
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            font-family: 'DM serif display', static; /link rel="preconnect" href="https://fonts.googleapis.com">
+            <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+            <link href="https://fonts.googleapis.com/css2?family=Anek+Devanagari:wght@100..800&family=DM+Serif+Display:ital@0;1&family=Rozha+One&family=Teko:wght@300..700&display=swap" rel="stylesheet">/;}
+
+        .nav {display: flex; justify-content: space-between;}
+
+        .designer-name {font-size: 24px;}
+
+        nav ul {list-style-type: none;}
+
+        nav ul li {display: inline; margin-right: 20px;}
+
+        nav a {text-decoration: none; color: #fff;}
+
+
+        main {display: flex; flex-direction: column; align-items: center; justify-content: center; height: 100vh; position: relative; 
+            margin-top: 30px;}
+
+        .portfolio-title {text-align: center; width: 100%; position: relative; z-index: 10; 
+            font-family: 'DM serif display', static; /link rel="preconnect" href="https://fonts.googleapis.com">
+            <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+            <link href="https://fonts.googleapis.com/css2?family=Anek+Devanagari:wght@100..800&family=DM+Serif+Display:ital@0;1&family=Rozha+One&family=Teko:wght@300..700&display=swap" rel="stylesheet">/;}
+
+        .portfolio-title h2 {font-size: 270px; margin-bottom: -50px; 
+            font-family: 'DM serif display', static; /link rel="preconnect" href="https://fonts.googleapis.com">
+            <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+            <link href="https://fonts.googleapis.com/css2?family=Anek+Devanagari:wght@100..800&family=DM+Serif+Display:ital@0;1&family=Rozha+One&family=Teko:wght@300..700&display=swap" rel="stylesheet">/;
+        padding: auto;}
+
+        .portfolio-title h3 {font-size: 24px; margin-top: 10px; text-align: left; margin-left: 150px;
+            font-family: 'DM serif display', static; /link rel="preconnect" href="https://fonts.googleapis.com">
+            <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+            <link href="https://fonts.googleapis.com/css2?family=Anek+Devanagari:wght@100..800&family=DM+Serif+Display:ital@0;1&family=Rozha+One&family=Teko:wght@300..700&display=swap" rel="stylesheet">/;}
+
+        .image-stack {position: absolute; top: 50%; left: 50%; margin-top: -150px; transform: translate(-60%, -50%); display: flex; 
+            flex-direction: column; align-items: center; z-index: 1;}
+
+        .image-stack img {width: 250px; height: auto; position: absolute; transition: transform 0.5s ease-in-out;}
+
+        .image-stack img:nth-child(1) {transform: rotate(0deg);}
+        
+        .image-stack img:nth-child(2) {transform: rotate(-5deg);}
+        
+        .image-stack img:nth-child(3) {transform: rotate(-10deg);}
+        
+        .image-stack img:nth-child(4) {transform: rotate(-15deg);}
+        
+        .image-stack img:nth-child(5) {transform: rotate(-20deg);}
+
+        .image-stack img:hover {transform: scale(1.1);}
+
+        footer {text-align: center; padding: 20px; background-color: rgba(255, 255, 255, 0.2);}
+    </style>
+</head>
+<body>
+    <header>
+        <div class="nav">
+            <h1 class="designer-name"  onclick="window.location.href='logo.html'"></a>Piyush Bodade</h1>
+            <nav>
+                <ul>
+                    <li><a href="logo.html">Home</a></li>
+                    <li><a href="aboutme.html">About Me</a></li>
+                    <li><a href="work.html">Work</a></li>
+                    <li><a href="contactme.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <div class="image-stack" onclick="openPage(work.html)">
+                <img src="images/nike.png" alt="Project 1" onclick="window.location.href='work.html'">
+                <img src="images/japan.png" alt="Project 2" onclick="window.location.href='work.html'">
+                <img src="images/starbucks.png" alt="Project 3" onclick="window.location.href='work.html'">
+                <img src="images/tooth.png" alt="Project 4" onclick="window.location.href='work.html'">
+                <img src="images/bike.png" alt="Project 5" onclick="window.location.href='work.html'">
+        </div>
+
+        <div class="portfolio-title">
+           <h2>Portfolio</h2> 
+           <h3>Piyush Bodade</h3>
+       </div>
+
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Piyush Bodade. All rights reserved.</p>
+    </footer>
+
+    <script>
+      function openPage() {
+          const images = document.querySelectorAll('.image-stack img');
+          images.forEach(img => {
+              img.style.opacity = '0'; // Fade out images
+          });
+          setTimeout(() => { 
+              window.location.href="work.html"; // Redirect after fade out
+          }, 500); // Match timeout with CSS transition duration
+      }
+    </script>
+</body>
+</html>

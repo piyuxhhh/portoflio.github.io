@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Work</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(to right, #212121, #000000);
+            color: #fff;
+        }
+
+        header {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            padding: 20px;
+            background-color: rgba(255, 255, 255, 0.2);
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            font-family: 'DM serif display', static; /link rel="preconnect" href="https://fonts.googleapis.com">
+            <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+            <link href="https://fonts.googleapis.com/css2?family=Anek+Devanagari:wght@100..800&family=DM+Serif+Display:ital@0;1&family=Rozha+One&family=Teko:wght@300..700&display=swap" rel="stylesheet">/;
+        
+        }
+
+        .nav {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .designer-name {
+            font-size: 24px;
+        }
+
+        nav ul {
+            list-style-type: none;
+        }
+
+        nav ul li {
+            display: inline; 
+            margin-right: 20px; 
+        }
+
+        nav a {
+            text-decoration: none; 
+            color: #fff; 
+        }
+
+        main {
+            display: flex;
+            flex-direction: column; 
+            align-items: center; 
+            justify-content: flex-start; 
+            height: calc(100vh - 100px); 
+            position: relative; 
+            margin-top: 70px; 
+        }
+
+        .image-stack {
+            margin-top: 70px;
+            display: flex; 
+            position: relative; 
+        }
+
+        .image-item {
+            display: flex;
+            flex-direction: column; 
+            align-items: center; 
+            margin-right: 20px; 
+            animation: slideIn 2s forwards;
+        }
+
+        @keyframes slideIn {
+            from {
+                transform: translateX(100%); 
+                opacity: 0; 
+            }
+            to {
+                transform: translateX(0); 
+                opacity: 1; 
+            }
+        }
+
+        .image-item img {
+            width: 220px; 
+            height: auto; 
+            transition: transform 0.5s ease-in-out; 
+            margin: 0 10px
+        }
+
+        .image-item img:hover {
+            transform: scale(1.1); 
+        }
+
+        .text-item h2 {
+            font-size: 20px; 
+            margin-top: 10px; 
+            margin-right: 100px;
+            font-family: 'DM serif display', static; /link rel="preconnect" href="https://fonts.googleapis.com">
+            <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+            <link href="https://fonts.googleapis.com/css2?family=Anek+Devanagari:wght@100..800&family=DM+Serif+Display:ital@0;1&family=Rozha+One&family=Teko:wght@300..700&display=swap" rel="stylesheet">/;
+        
+        }
+
+        .text-item h3 {
+            font-size: 16px; 
+            color: #ccc; 
+            font-family: 'DM serif display', static; /link rel="preconnect" href="https://fonts.googleapis.com">
+            <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+            <link href="https://fonts.googleapis.com/css2?family=Anek+Devanagari:wght@100..800&family=DM+Serif+Display:ital@0;1&family=Rozha+One&family=Teko:wght@300..700&display=swap" rel="stylesheet">/;
+        
+        }
+        
+        .work-title {
+          position: fixed; 
+          bottom: 20px; 
+          right: 20px;
+          font-size: 200px; 
+          margin-right: 30px;
+          color: #fff; 
+          z-index: 10; 
+          font-family: 'DM serif display', static; /link rel="preconnect" href="https://fonts.googleapis.com">
+            <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+            <link href="https://fonts.googleapis.com/css2?family=Anek+Devanagari:wght@100..800&family=DM+Serif+Display:ital@0;1&family=Rozha+One&family=Teko:wght@300..700&display=swap" rel="stylesheet">/;
+        
+      }
+      footer {
+          text-align: center;
+          padding: 20px;
+          background-color: rgba(255, 255, 255, 0.2);
+      }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="nav">
+            <h1 class="designer-name" onclick="window.location.href='logo.html'">Piyush Bodade</h1>
+            <nav>
+                <ul>
+                    <li><a href="logo.html">Home</a></li>
+                    <li><a href="aboutme.html">About Me</a></li>
+                    <li><a href="work.html">Work</a></li>
+                    <li><a href="contactme.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+
+       <!-- Image Stack -->
+       <div class="image-stack">
+           <div class="image-item">
+               <img src="images/nike.png" alt="Project Nike" onclick="window.location.href='nike.html'">
+               <div class="text-item">
+                   <h2>Motion Poster</h2>
+                   <h3>An interactive Nike Ad</h3>
+               </div>
+           </div>
+
+           <div class="image-item">
+               <img src="images/japan.png" alt="Project Japan" onclick="window.location.href='japan.html'">
+               <div class="text-item" style="margin-left: -30px;">
+                   <h2>Brochure</h2>
+                   <h3>A culinary journey to Japan</h3>
+               </div>
+           </div>
+
+           <div class="image-item">
+               <img src="images/starbucks.png" alt="Project Starbucks" onclick="window.location.href='starbucks.html'">
+               <div class="text-item">
+                   <h2 style="margin-left: -30px;">Motion Ad</h2>
+                   <h3 style="margin-left: -30px;">Global Starbucks Culture</h3>
+               </div>
+           </div>
+
+           <div class="image-item">
+               <img src="images/tooth.png" alt="Project Tooth" style="width: 210px;"  onclick="window.location.href='teeth.html'">
+               <div class="text-item" style="margin-right: -22px ;">
+                   <h2>Infographic</h2>
+                   <h3>Illustarted Poster on Dental hygine</h3>
+               </div>
+           </div>
+
+           <div class="image-item">
+               <img src="images/bike.png" alt="Project Bike" onclick="window.location.href='magazine.html'">
+               <div class="text-item">
+                   <h2>Project Bike</h2>
+                   <h3>Sustainable Transportation</h3>
+               </div>
+           </div>
+       </div>
+
+    </main>
+    <div class="work-title">Work</div>
+    <footer>
+        <p>&copy; 2024 Piyush Bodade. All rights reserved.</p>
+    </footer>
+
+    <script>
+      // Show black container after image stack animation
+      window.onload = function() {
+          const blackContainer = document.getElementById('blackContainer');
+          
+          // Delay to allow image stack animation to complete before showing container
+          setTimeout(() => {
+              blackContainer.style.display = 'block'; // Show the black container
+              blackContainer.style.animation = 'fadeIn 1s forwards'; // Add fade-in animation
+          }, 2000); // Adjust timing as needed
+      };
+
+      // Optional fade-in animation for black container
+      const style = document.createElement('style');
+      style.innerHTML = `
+          @keyframes fadeIn {
+              from { opacity: 0; }
+              to { opacity: 1; }
+          }
+      `;
+      document.head.appendChild(style);
+    </script>
+
+</body>
+</html>

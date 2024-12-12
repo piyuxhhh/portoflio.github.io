@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Work - Portfolio</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(to right, #242930, #14181b); 
+            color: #fff; 
+            background-color:#FCF0E5;
+            font-family: 'DM serif display', static; /link rel="preconnect" href="https://fonts.googleapis.com">
+            <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+            <link href="https://fonts.googleapis.com/css2?family=Anek+Devanagari:wght@100..800&family=DM+Serif+Display:ital@0;1&family=Rozha+One&family=Teko:wght@300..700&display=swap" rel="stylesheet">/;
+        }
+
+        
+
+        header {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            padding: 20px;
+            background-color: rgba(255, 255, 255, 0.2);
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            font-family: 'DM serif display', static; /link rel="preconnect" href="https://fonts.googleapis.com">
+            <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+            <link href="https://fonts.googleapis.com/css2?family=Anek+Devanagari:wght@100..800&family=DM+Serif+Display:ital@0;1&family=Rozha+One&family=Teko:wght@300..700&display=swap" rel="stylesheet">/;
+        }
+
+        .nav {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .designer-name {
+            font-size: 24px;
+        }
+
+        nav ul {
+            list-style-type: none;
+        }
+
+        nav ul li {
+            display: inline; 
+            margin-right: 20px; 
+        }
+
+        nav a {
+            text-decoration: none; 
+            color: #fff; 
+        }
+
+        main {
+            display: flex;
+            flex-direction: column; 
+            align-items: center; 
+            justify-content: flex-start; 
+            margin-top: 70px; 
+            background-color: linear-gradient(to right, #242930, #000000);
+            font-family: 'DM serif display', static; /link rel="preconnect" href="https://fonts.googleapis.com">
+            <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+            <link href="https://fonts.googleapis.com/css2?family=Anek+Devanagari:wght@100..800&family=DM+Serif+Display:ital@0;1&family=Rozha+One&family=Teko:wght@300..700&display=swap" rel="stylesheet">/;
+        }
+
+        .project-title {
+            font-size: 48px; 
+            text-align: right; 
+            width: 100%; 
+            margin-bottom: -20px; 
+        }
+
+        .image-container {
+            position: relative; 
+            width: 100%; 
+        }
+
+        .full-width-image {
+            width: 100%; 
+            height: auto; 
+            opacity: 0; 
+            transform: translateY(-20px); /
+            transition: opacity 0.5s ease-out, transform 0.5s ease-out; 
+        }
+
+        .image-description {
+            position: absolute; 
+            top: 1%; 
+            right: 14.5%; 
+            max-width: 300px; 
+            color: rgb(0, 0, 0); 
+        }
+
+        footer {
+          text-align: center;
+          padding: 20px;
+          background-color: rgba(255, 255, 255, 0.2);
+      }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="nav">
+            <h1 class="designer-name" onclick="window.location.href='logo.html'">Piyush Bodade</h1>
+            <nav>
+                <ul>
+                    <li><a href="logo.html">Home</a></li>
+                    <li><a href="aboutme.html">About Me</a></li>
+                    <li><a href="work.html">Work</a></li>
+                    <li><a href="contactme.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <h1 class="project-title" style="font-size: 100px; margin-right:50px;margin-bottom: 20px; margin-top: 100px;color: #ffffff;">Motion Poster</h1>
+
+        <!-- First image and Text -->
+        <div class="image-container">
+           <img src="images/nike1.png" alt="First Project Image" class="full-width-image" id="firstImage">
+       </div>
+
+       <!-- Second Full-Width Image -->
+       <img src="images/nike2.png" alt="Second Project Image" class="full-width-image" id="secondImage">
+
+       <!-- Third Full-Width Image -->
+       <img src="images/nike3.png" alt="Third Project Image" class="full-width-image" id="thirdImage">
+
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Piyush Bodade. All rights reserved.</p>
+    </footer>
+
+    <script>
+      // Function to reveal images with scroll-down animation
+      function revealImages() {
+          const images = document.querySelectorAll('.full-width-image');
+          images.forEach((img) => {
+              img.style.opacity = '1'; // Fade in
+              img.style.transform = 'translateY(0)'; // Move to original position
+          });
+      }
+
+      // Trigger revealImages on scroll
+      window.addEventListener('scroll', () => {
+          const windowHeight = window.innerHeight;
+          const revealPoint = windowHeight / 1.2; // Adjust this value to control when images appear
+
+          const images = document.querySelectorAll('.full-width-image');
+          images.forEach((img) => {
+              const imgTop = img.getBoundingClientRect().top;
+
+              if (imgTop < revealPoint) {
+                  revealImages();
+              }
+          });
+      });
+
+      // Initial call to ensure images are revealed if already in view
+      revealImages();
+    </script>
+
+</body>
+</html>

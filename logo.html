@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Logo Animation</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh; 
+            background: linear-gradient(to right, #212121, #000000); 
+            color: #fff; 
+            font-family: font-family: 'DM serif display', static; /link rel="preconnect" href="https://fonts.googleapis.com">
+            <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+            <link href="https://fonts.googleapis.com/css2?family=Anek+Devanagari:wght@100..800&family=DM+Serif+Display:ital@0;1&family=Rozha+One&family=Teko:wght@300..700&display=swap" rel="stylesheet">/;
+        }
+
+        .logo {
+            text-align: center;
+            width: 100%; 
+            position: relative; 
+            z-index: 10;
+            font-family: 'DM serif display', static; /link rel="preconnect" href="https://fonts.googleapis.com">
+            <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+            <link href="https://fonts.googleapis.com/css2?family=Anek+Devanagari:wght@100..800&family=DM+Serif+Display:ital@0;1&family=Rozha+One&family=Teko:wght@300..700&display=swap" rel="stylesheet">/;
+            font-size: 270px; 
+            margin-bottom: -50px;
+            opacity: 0; 
+            animation: fadeInOut 3.5s forwards; 
+        }
+
+        @keyframes fadeInOut {
+            0% {
+                opacity: 0; 
+                transform: scale(1.2);
+            }
+            50% {
+                opacity: 1; 
+                transform: scale(1); 
+            }
+            100% {
+                opacity: 0; 
+                transform: scale(1.2); 
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="logo"><b>Portfolio</b></div>
+
+    <script>
+        // Redirect after animation ends
+        setTimeout(() => {
+            window.location.href = 'index.html'; // Change to your main page URL
+        }, 2000); // Match timeout with animation duration
+    </script>
+</body>
+</html>
